@@ -18,12 +18,13 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="animation.css">
+  <link rel="stylesheet" href="clock.css">
 
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-
+  
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -35,7 +36,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
-          <li><a class="mybtn" href="assets/resume/AMALJITH S..pdf" download="AMALJITH S..pdf">Download Resume</a></li> 
+          <li><a class="mybtn" href="assets/resume/AMALJITH S..pdf" download="AMALJITH S..pdf">Download Resume</a></li>
           <li><a class="nav-link scrollto " href="#work">Work</a></li>
           <li><a class="nav-link scrollto " href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -45,13 +46,35 @@
 
     </div>
   </header>
+  <section>
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+      <div class="toast-container top-80 start-50 translate-middle p-3">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="assets/img/youtube-icon.png" class="rounded me-2 youtube-icon" alt="YouTube Icon">
+            <strong class="me-auto">Subscribe to my YouTube Channel!</strong>
+            <small class="text-body-secondary">just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Click to subscribe <a href="http://www.youtube.com/@AmaljithAchus" target="_blank">AmaljithAchus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
   <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/intro.gif)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">
+
         <div class="container">
           <h1 class="hero-title mb-4">I am AMALJITH S.</h1>
           <p class="hero-subtitle"><span class="typed" data-typed-items="Student,Designer,Web Developer"></span></p>
+
+          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
         </div>
       </div>
     </div>
@@ -77,8 +100,10 @@
                       <div class="about-info">
                         <p><span class="title-s">Name: </span> <span>Amaljith S.</span></p>
                         <p><span class="title-s">Profile: </span> <span>Web Developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>amaljith611@outlook.com</span></p>
-                        <p><span class="title-s">Phone: </span> <a href="tel:+918590785899"><span>(+91) 8590785899</span></a></p>
+                        <p><span class="title-s">Email: </span><a
+                            href="mailto:amaljith611@outlook.com"><span>amaljith611@outlook.com</span></a></p>
+                        <p><span class="title-s">Phone: </span> <a href="tel:+918590785899"><span>(+91)
+                              8590785899</span></a></p>
                       </div>
                     </div>
                   </div>
@@ -145,7 +170,8 @@
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h3 class="title-a">
-              Resume
+              <a class="mybtn" href="assets/resume/AMALJITH S..pdf" download="AMALJITH S..pdf">Resume</a>
+
             </h3>
             <div class="line-mf"></div>
           </div>
@@ -624,6 +650,7 @@
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="form.js"></script>
+  <script src="clock.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
